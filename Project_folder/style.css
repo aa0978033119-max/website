@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  font-size: 18px;      
+  overflow-y: auto;
+  background-color: (135deg, #fff5f5, #fdecef, #f9e4ff);
+}
+
+/* 統一段落內距與大標題距離 */
+#about,
+#skills,
+#experience,
+#contact {
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* 統一大標題樣式與距離 */
+#about h2,
+#skills h2,
+#experience h2,
+#contact h2 {
+  text-align: left;
+  color: #e98ba9;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  padding-left: 10px;
+}
+
+/*  nav  */
+
+nav {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(220, 80, 120);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: rgb(200, 50, 100); 
+  transform: scale(1.1);
+}
+
+/*  Header  */
+header {
+  position: relative;
+  text-align: left;
+  background-color: #e98ba9;
+  color: white;
+  padding: 60px 20px;
+}
+
+header .slogan {
+  color: white;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+header h1, header {
+  color: #333333; 
+}
+
+/*  main  */
+main {
+  width: 90%;            
+  margin: 60px auto;
+  max-width: 1200px; 
+  color: black;
+}
+
+img{
+  width: 300px;
+  height: auto;
+}
+
+/*  個人基本資訊  */
+#about {
+  margin-bottom: 60px;
+  background-color: transparent;
+}
+
+#about h2 {
+  text-align: left;
+  color: #e98ba9;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.profile-photo {
+  width: 300px; 
+  height: 300px;
+  border-radius: 12px; 
+  object-fit: cover;
+  order: 0;
+}
+
+.about-content article {
+  flex: 1;
+}
+
+/*  自我介紹超連結  */
+#about p a {
+  color: #e98ba9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#about p a:hover {
+  color: #b44a6a;
+  text-decoration: underline;
+}
+
+/*  專業技能  */
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 25px;
+}
+/* 整個技能區塊 */
+#skills {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fff0f0;
+  margin-bottom: 60px;
+}
+
+
+/* 大標題 */
+.skills-title {
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+/* 小標題（程式語言 / 語言能力） */
+.skills-subtitle {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #e98ba9;
+  font-weight: bold;
+}
+
+.skill-block {
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.circle {
+  --size: 120px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(#e98ba9 0%, #f3d1dc 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.skill p {
+  margin-top: 10px;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+
+/*  個人經歷  */
+
+section h2 {
+  text-align: left;
+  font-size: 2rem;
+  color: #e98ba9;
+  margin-bottom: 60px;
+}
+
+#experience {
+  margin-bottom: 70px;
+  background-color: #fff0f0;
+  border-radius: 20px;
+  padding: 40px 20px 70px 20px;
+}
+
+/* 每個內容獨立 */
+.exp-card {
+  background-color: #ffffff; 
+  padding: 50px 100px 100px 25px; 
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: relative; 
+}
+
+.exp-card h3 {
+  color: #e98ba9;
+  margin-bottom: 15px;
+}
+
+.exp-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.exp-content img {
+  width: 350px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.exp-text {
+  flex: 1;
+}
+
+/* 經驗區塊超連結 */
+#experience p a,
+.exp-text a {
+  color: #e98ba9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#experience p a:hover,
+.exp-text a:hover {
+  color: #b44a6a;
+  text-decoration: underline;
+}
+
+/* 撥放按鈕定位到卡片右下角 */
+.video-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  margin: 0;
+}
+
+.play-icon {
+  width: 70px;
+  height: 70px;
+  background-color:#e98ba9; /* 播放按鈕底色 */
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* 三角形 */
+.play-icon::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  width: 0; 
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 22px solid #f6dce5; /* 三角形顏色 */
+}
+
+/* hover 效果 */
+.play-icon:hover {
+  transform: scale(1.1);
+  background-color: #f6dce5;
+}
+
+
+/*  聯絡資訊  */
+#contact {
+  background-color: #fff5f5;
+  padding: 40px 20px;
+  margin: 60px auto;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.contact-links a {
+  color: #b44a6a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.3rem;
+}
+
+.contact-links a:hover {
+  color: #e7c2c2;
+}
+
+.contact-links img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.contact-links a:hover img {
+  transform: scale(1.15);
+}
+
+
+/*  Footer  */
+footer {
+  background-color: #e98ba9;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: auto;
+}
+
+/* TOP */
+.top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #f2cad3;
+  color: #b44a6a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.top-btn:hover {
+  background-color: #e98ba9;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* 筆電 */
+@media (max-width: 1920px) and (min-width: 1024px) {
+  body {
+    font-size: 18px; 
+  }
+
+  main {
+    width: 90%;      
+    max-width: 1200px;
+  }
+
+  header {
+    padding: 60px 20px;
+    text-align: left;
+  }
+
+  #about {
+    flex-wrap: nowrap;
+    gap: 40px;
+    background-color: transparent;
+    border-radius: 20px;
+  }
+
+  img {
+    width: 320px;
+    height: auto;
+  }
+
+  nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+/* 中大型筆電 */
+@media (min-width: 1280px) and (max-width: 1680px) {
+  body {
+    font-size: 17px; 
+  }
+
+  main {
+    width: 93%;       
+    max-width: 1350px;  
+  }
+
+  header {
+    padding: 65px 30px; 
+  }
+
+  #about {
+    gap: 40px;
+    flex-wrap: nowrap;  
+    background-color: transparent;
+  }
+
+  img {
+    width: 320px;
+  }
+
+  nav a {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+
+/* 手機與平板 */
+@media (max-width: 768px) {
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .exp-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .exp-text {
+    flex: unset;
+  }
+
+  .video-button {
+    position: static;
+    margin: 15px auto 0 auto;
+    display: block;
+  }
+
+  .play-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-icon::before {
+    left: 18px;
+    top: 12px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #f6dce5;
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+  }
+
+  /* nav 裡的圓圈縮小 */
+  nav a {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
